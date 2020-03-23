@@ -4,9 +4,11 @@ var admin = require('firebase-admin');
 var serviceAccount = require("../serviceAccountKey.json");
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert(serviceAccount),
+    storageBucket: "bybrisk-d2074.appspot.com"
 });
 let db = admin.firestore();
+var bucket = admin.storage().bucket();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -22,7 +24,8 @@ router.get('/getting-started',function (req,res,next) {
   res.render('homepage',
       {
         title: 'COMIC19 | Homepage',
-        link1:  req.query.fName+" "+req.query.lName,
+          uName : "Hi "+req.query.fName,
+        link1:  'About',
         link2: '',
         link3: '',
         link4: '',
