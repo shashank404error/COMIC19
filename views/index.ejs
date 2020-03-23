@@ -1,0 +1,53 @@
+<html>
+<title><%=title%></title>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter:700&display=swap" rel="stylesheet">
+  <link href="/stylesheets/auth.css" rel="stylesheet">
+
+</head>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+
+<% include Template/header.ejs %>
+<br><br><br><br>
+<div class="container contact-form">
+  <form name="businessBasic" method="get" action="/getting-started">
+    <h3 class="w3-xxlarge greetHeadline w3-hide-small"><font color="black">Indian Comics @ your doorstep</font></h3>
+    <h3 class="w3-xlarge w3-hide-large w3-hide-medium greetHeadline"><font color="black">Indian Comics @ your doorstep</font></h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" name="email" class="form-control" placeholder="Email *" value="" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" name="fName" class="form-control" placeholder="First name *" value="" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" name="lName" class="form-control" placeholder="Last name *" value="" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="submit" name="btnSubmit" class="btnContact" value="Continue" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
